@@ -9,6 +9,8 @@
 body {
   font-family: 'Lato', sans-serif;
 	color: #3a3a3a;
+	max-width: 1296px;
+	margin: auto;
 }
 
 h1 {
