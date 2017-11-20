@@ -1,0 +1,171 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+	color: #3a3a3a;
+}
+
+h1 {
+  color: #383838;
+  font-size: 1.2em;
+  margin: 15px;
+	text-align: center;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+p {
+	font-size: .8em;
+	font-weight: 300;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/*---- Main ----*/
+
+.title_container {
+	height: 95px;
+	width: 100%;
+	background: #FFFFFF;
+}
+
+.title {
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 100%;
+	margin: auto;
+}
+
+/*---- Sections ----*/
+
+ul {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+ul>div {
+	position: absolute;
+	display: none;
+	top: 23%;
+	background: #FFFFFF;
+	border: .3px solid rgba(151,151,151,0.25);
+	border-radius: 5px;
+	height: 358px;
+	width: 311px;
+	z-index: 145;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+ul>div img {
+	border-radius: 50%;
+	display: block;
+	width: 106px;
+	height: 106px;
+}
+
+ul>div::after {
+	content: attr(data-before);
+	background-image: url('../icon/close.svg');
+	background-repeat: no-repeat;
+	background-size: 24px;
+	position: absolute;
+	top: 5%;
+	right: 9%;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+ul>div *:nth-child(5) {
+	width: 100%;
+	padding-bottom: 3px;
+	border-bottom: .3px solid rgba(151,151,151,0.35);
+}
+
+ul>div * {
+	margin: 9px;
+}
+
+span {
+	height: 185%;
+	top: -20%;
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	position: absolute;
+}
+
+li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background: #FAFAFA;
+	border: .25px solid rgba(151,151,151,0.08);
+	height: 118px;
+	max-width: 326px;
+}
+
+li:hover,
+li:focus {
+	background: #fff;
+	cursor: pointer;
+}
+
+li img {
+	width: 73px;
+	border-radius: 50%;
+}
+
+li div:last-child {
+	width: 175px;
+}
+
+li div:last-child h3,
+li div:last-child p {
+	margin-top: 9px;
+}
+
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media(min-width: 650px) {
+	ul {
+		flex-direction: row;
+	}
+}
+
+/* ---- Float clearfix ---- */
