@@ -157,6 +157,7 @@ li div:last-child {
 li div:last-child h3,
 li div:last-child p {
 	margin-top: 9px;
+	text-transform: capitalize;
 }
 
 
